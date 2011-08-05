@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="achievment">
+    <xs:complexType>
+      <xs:attribute name="ach_id" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="achievments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="achievment" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="friends">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="score" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="highscores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="local" />
+        <xs:element ref="friends" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="local">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="score" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="numblock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="playerinfo" />
+        <xs:element ref="highscores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="playerinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="achievments" />
+      </xs:sequence>
+      <xs:attribute name="initials" type="xs:string" use="required" />
+      <xs:attribute name="combo" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="score">
+    <xs:complexType>
+      <xs:attribute name="value" type="xs:integer" use="required" />
+      <xs:attribute name="initials" type="xs:string" use="required" />
+      <xs:attribute name="level" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

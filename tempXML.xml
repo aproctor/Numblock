@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<numblock>
+	<playerinfo initials="ACP">
+		<achievments>
+			<achievment ach_id="123" />
+			<achievment ach_id="567" />
+		</achievments>
+	</playerinfo>
+	<highscores>
+		<local>
+			<score value="1234500000" initials="ABC" level="10" />
+			<score value="543" initials="DEF" level="9" />
+		</local>
+		<friends>
+			<score value="1234500000" initials="ABC" level="10" />
+			<score value="543" initials="DEF" level="9" />
+		</friends>
+	</highscores>
+</numblock>
